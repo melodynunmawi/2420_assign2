@@ -128,3 +128,10 @@ username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i
          username@droplet:~$ sudo systemctl start caddy
          username@droplet:~$ sudo systemctl enable --now caddy
          username@droplet:~$ sudo systemctl status caddy
+
+  ## out put
+ 
+![image](https://user-images.githubusercontent.com/59521385/205430002-2699e5c5-2f56-4d1b-bcdf-487be15ad712.png)
+      
+![image](https://user-images.githubusercontent.com/59521385/205430029-2d583a99-18bc-4cc2-80ef-51b81c20d494.png)
+
