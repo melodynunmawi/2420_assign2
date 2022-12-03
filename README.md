@@ -22,7 +22,9 @@
 
 ## Install Caddy Web Server
    - install link below in both of your droplets
-username@droplet:~$ wget      https://github.com/caddyserver/caddy/releases/download/v2.6.2/caddy_2.6.2_linux_amd64.tar.gz
+   
+username@droplet:~$ wget https://github.com/caddyserver/caddy/releases/download/v2.6.2/caddy_2.6.2_linux_amd64.tar.gz
+
     - extract the file by use 
   username@droplet:~$ tar -xvf caddy_2.6.2_linux_amd64.tar.gz  
 
