@@ -14,10 +14,11 @@
 ![image](https://user-images.githubusercontent.com/59521385/205427992-af24d34c-93b2-459c-8ba8-b768a1bf1979.png)
 
    Please click this lick for [VPC Infrastructure set up](https://vimeo.com/775412708/4a219b37e7)
+## Create new regular user
 
-**Step two**
+![image](https://user-images.githubusercontent.com/59521385/205428145-5ba57a68-5155-4cd6-a810-d2dacd9226a4.png)
 
-Create a new regular user on both of your droplets, you can use the same user-name and password for both droplets, this will make your life easier.
+  **Create a new regular user on both of your droplets, you can use the same user-name and     password for both droplets, this will make your life easier.
 
 **Step three** 
 
