@@ -80,10 +80,10 @@ start()
 ```
    Test your server locally, and go to the provided link.
    username@wsl:~/2420-assign-two/src$ node index.js
- ![image](https://user-images.githubusercontent.com/59521385/205429015-a498dbd0-a0c0-49ea-a16c-e3edf052589e.png)
+![image](https://user-images.githubusercontent.com/59521385/205429015-a498dbd0-a0c0-49ea-a16c-e3edf052589e.png)
 
-
-**Step five**
+  Finally, copy your 2420-assign-two directory to both your droplets.
+  username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
 
 Write your Caddyfile or Nginx server block on your local machine
 
