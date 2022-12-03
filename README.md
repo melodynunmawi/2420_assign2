@@ -13,7 +13,7 @@
 
 ![image](https://user-images.githubusercontent.com/59521385/205427992-af24d34c-93b2-459c-8ba8-b768a1bf1979.png)
 
-[As2 Infrastructure](https://vimeo.com/775412708/4a219b37e7)
+   Please click this lick for [VPC Infrastructure set up](https://vimeo.com/775412708/4a219b37e7)
 
 **Step two**
 
