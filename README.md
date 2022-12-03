@@ -90,25 +90,25 @@ username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i
 ## Co- responding server
    Write your Caddyfile and server block with reverse proxy server on your local machine
             
-http:// {
-          root * /var/www/html
-          reverse_proxy /api localhost:5050
-          file_server
-      }
+            http:// {
+                      root * /var/www/html
+                      reverse_proxy /api localhost:5050
+                      file_server
+                  }
 
 
-[Unit]
-Description=Serve HTML in /var/www using caddy
-After=network.target
-[Service]
-Type=notify
-ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
-ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
-TimeoutStopSec=5
-KillMode=mixed
+            [Unit]
+            Description=Serve HTML in /var/www using caddy
+            After=network.target
+            [Service]
+            Type=notify
+            ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
+            ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
+            TimeoutStopSec=5
+            KillMode=mixed
 
-[Install]
-WantedBy=multi-user.target
+            [Install]
+            WantedBy=multi-user.target
 
 ## Install node and npm with Volta
      Below, you will be installing node and npm with Volta for both of your droplets.
