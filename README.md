@@ -85,9 +85,30 @@ start()
   Finally, copy your 2420-assign-two directory to both your droplets.
   username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
 
-Write your Caddyfile or Nginx server block on your local machine
+## Co- responding server
+   Write your Caddyfile and server block with reverse proxy server on your local machine
+   - reverse proxy server with server block 
+      http:// {
+          root * /var/www/html
+          reverse_proxy /api localhost:5050
+          file_server
+      }
 
-In addition to the basic server block that we created last week you are going to add a reverse proxy server.
+   - Caddy File
+      [Unit]
+      Description=Serve HTML in /var/www using caddy
+      After=network.target
+
+      [Service]
+      Type=notify
+      ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
+      ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
+      TimeoutStopSec=5
+      KillMode=mixed
+
+      [Install]
+      WantedBy=multi-user.target
+
 
 Your reverse proxy server should forward 
 
@@ -95,6 +116,7 @@ localhost:5050 (http:/127.0.0.1:5050). These are both localhost.
 
 When someone visits your load balancers ip address api.
 ie http://134.0.34.138/api they should see the hello world message from your node server.
+      
 
 **Step six**
 
