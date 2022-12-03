@@ -32,17 +32,17 @@ username@droplet:~$ wget https://github.com/caddyserver/caddy/releases/download/
 
 
  ## Write a web app
-    - create new directory on WSL and called 2420-assign-two. 
-    - Inside of this directory create 2 new directories **html** and **src**.
-    - Inside of the html directory create an index.html page
-      Inside of your index.html document create a simple but complete html document 
-      (include a doctype, head, body… all the stuff an html document should have).
-    - Inside of the src directory create a new node project.
-          - `npm init` 
-          - `npm i fastify` to install fastify.
-    - Create an index.js file and add in the fastify hello world example.
+          - create new directory on WSL and called 2420-assign-two. 
+          - Inside of this directory create 2 new directories **html** and **src**.
+          - Inside of the html directory create an index.html page
+            Inside of your index.html document create a simple but complete html document 
+            (include a doctype, head, body… all the stuff an html document should have).
+          - Inside of the src directory create a new node project.
+                - `npm init` 
+                - `npm i fastify` to install fastify.
+          - Create an index.js file and add in the fastify hello world example.
 
-**Test your server locally and move both your html and src directory to both of your servers.**
+**Test your server locally (WSL) and move both your html and src directory to both of your droplets servers.**
 
 username@wsl:~$ cd 2420-assign-two/src && curl https://get.volta.sh | bash
 
