@@ -8,8 +8,8 @@
 **Step one**
 
 ## Create DO infrastructure
-   - VPC: vpc-2420
-   - Inbound Rules: HTTP ans SSH
+        - VPC: vpc-2420
+        - Inbound Rules: HTTP ans SSH
 
 ![image](https://user-images.githubusercontent.com/59521385/205427992-af24d34c-93b2-459c-8ba8-b768a1bf1979.png)
 
@@ -35,15 +35,11 @@ username@droplet:~$ wget https://github.com/caddyserver/caddy/releases/download/
      - create new directory on WSL and called 2420-assign-two. 
      - Inside of this directory create 2 new directories **html** and **src**.
      - Inside of the html directory create an index.html page
-     
-   **Inside of your index.html document create a simple but complete html document (include      a doctype, head, body… all the stuff an html document should have).**
-
+       Inside of your index.html document create a simple but complete html document (include a doctype, head, body… all the stuff an html document should have).
      - Inside of the src directory create a new node project.
           - `npm init` 
           - `npm i fastify` to install fastify.
-   **Create an index.js file and add in the fastify hello world example.**
-
-**You will need to alter this file slightly to work with the rest of the assignment. Figuring out what you need to change is part of the assignment.**
+     - Create an index.js file and add in the fastify hello world example.
 
 Test your server locally and move both your html and src directory to both of your servers.
 
