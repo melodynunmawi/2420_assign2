@@ -124,7 +124,7 @@ WantedBy=multi-user.target
 ## Check all the file are working
    In both your droplets, start and enable the Caddy service.
       
-   username@droplet:~$ sudo systemctl daemon-reload
-   username@droplet:~$ sudo systemctl start caddy
-   username@droplet:~$ sudo systemctl enable --now caddy
-   username@droplet:~$ sudo systemctl status caddy
+         username@droplet:~$ sudo systemctl daemon-reload
+         username@droplet:~$ sudo systemctl start caddy
+         username@droplet:~$ sudo systemctl enable --now caddy
+         username@droplet:~$ sudo systemctl status caddy
