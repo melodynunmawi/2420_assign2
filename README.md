@@ -80,6 +80,7 @@ start()
 ```
    Test your server locally, and go to the provided link.
    username@wsl:~/2420-assign-two/src$ node index.js
+
 ![image](https://user-images.githubusercontent.com/59521385/205429015-a498dbd0-a0c0-49ea-a16c-e3edf052589e.png)
 
   Finally, copy your 2420-assign-two directory to both your droplets.
@@ -88,26 +89,26 @@ start()
 ## Co- responding server
    Write your Caddyfile and server block with reverse proxy server on your local machine
    - reverse proxy server with server block 
-      http:// {
+            
+http:// {
           root * /var/www/html
           reverse_proxy /api localhost:5050
           file_server
       }
 
    - Caddy File
-      [Unit]
-      Description=Serve HTML in /var/www using caddy
-      After=network.target
+[Unit]
+Description=Serve HTML in /var/www using caddy
+After=network.target
+[Service]
+Type=notify
+ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
+ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
+TimeoutStopSec=5
+KillMode=mixed
 
-      [Service]
-      Type=notify
-      ExecStart=/usr/bin/caddy run --config /etc/caddy/Caddyfile
-      ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
-      TimeoutStopSec=5
-      KillMode=mixed
-
-      [Install]
-      WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
 
 
 Your reverse proxy server should forward 
