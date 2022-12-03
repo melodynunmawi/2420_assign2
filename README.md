@@ -84,11 +84,11 @@ start()
 ![image](https://user-images.githubusercontent.com/59521385/205429015-a498dbd0-a0c0-49ea-a16c-e3edf052589e.png)
 
   Finally, copy your 2420-assign-two directory to both your droplets.
-  username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
+  
+username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
 
 ## Co- responding server
    Write your Caddyfile and server block with reverse proxy server on your local machine
-   - reverse proxy server with server block 
             
 http:// {
           root * /var/www/html
@@ -96,7 +96,7 @@ http:// {
           file_server
       }
 
-   - Caddy File
+
 [Unit]
 Description=Serve HTML in /var/www using caddy
 After=network.target
