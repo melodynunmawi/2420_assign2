@@ -83,8 +83,8 @@ start()
 
 ![image](https://user-images.githubusercontent.com/59521385/205429015-a498dbd0-a0c0-49ea-a16c-e3edf052589e.png)
 
-  Finally, copy your 2420-assign-two directory to both your droplets.
-  
+   Finally, copy your 2420-assign-two directory to both your droplets.
+   
 username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
 
 ## Co- responding server
@@ -110,28 +110,20 @@ KillMode=mixed
 [Install]
 WantedBy=multi-user.target
 
+## Install node and npm with Volta
+     Below, you will be installing node and npm with Volta for both of your droplets.
 
-Your reverse proxy server should forward 
-
-localhost:5050 (http:/127.0.0.1:5050). These are both localhost.
-
-When someone visits your load balancers ip address api.
-ie http://134.0.34.138/api they should see the hello world message from your node server.
+     In both your droplets, install node and npm with Volta.
+     username@droplet:~$ curl https://get.volta.sh | bash
+     username@droplet:~$ source ~/.bashrc
+     username@droplet:~$ volta install node
+     username@droplet:~$ volta install npm
       
+![image](https://user-images.githubusercontent.com/59521385/205429833-ca1cacb8-94c6-4b73-887d-fbc4f0637b46.png)
 
-**Step six**
-
-install node and npm with Volta. npm will be installed alongside the version of node that you install.
-
-You will need to source your .bashrc after installing Volta to install node. Volta will add two lines of code to your .bashrc so that your shell knows where volta is and where volta will install node and npm.
-
-**Step seven**
-
-write a service file on your local machine to start your node application.
-Your service file should restart the service on failure (see link below.
-
-Your service file should require a configured network. 
-
-see `man systemd.special` and search for network for how to do this.
-
-remember that you will need to use the full path to your application and the node binary.
+## Check all the file are working
+   In both your droplets, start and enable the Caddy service.
+   username@droplet:~$ sudo systemctl daemon-reload
+   username@droplet:~$ sudo systemctl start caddy
+   username@droplet:~$ sudo systemctl enable --now caddy
+   username@droplet:~$ sudo systemctl status caddy
