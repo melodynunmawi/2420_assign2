@@ -80,8 +80,10 @@ const start = async () => {
 }
 start()
 ```
-      Test your server locally, and go to the provided link.
-      username@wsl:~/2420-assign-two/src$ node index.js
+   Test your server locally, and go to the provided link.
+   username@wsl:~/2420-assign-two/src$ node index.js
+ ![image](https://user-images.githubusercontent.com/59521385/205429015-a498dbd0-a0c0-49ea-a16c-e3edf052589e.png)
+
 
 **Step five**
 
