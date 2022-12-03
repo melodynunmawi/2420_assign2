@@ -85,7 +85,7 @@ start()
 
    Finally, copy your 2420-assign-two directory to both your droplets.
    
-username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
+            username@wsl:~$ rsync -r 2420-assign-two "<username>@<droplet-ip>:~/" -e "ssh -i ~/.ssh/<sshkey-name> -o StrictHostKeyChecking=no"
 
 ## Co- responding server
    Write your Caddyfile and server block with reverse proxy server on your local machine
