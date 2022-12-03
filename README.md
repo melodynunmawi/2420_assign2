@@ -1,13 +1,17 @@
+## Install all requirement before starting assignment
+      - WSL and DigitalOcean droplets
+      - Ubuntu 22.10 or 22.04
+      - Windows Terminal
+      - Volta to install node
+      - Fastify for your NodeJS server
+      
 **Step one**
 
-Create DO infrastructure. Follow along with the video below and create the infrastructure for this assignment.
+## Create DO infrastructure
+   - VPC: vpc-2420
+   - Inbound Rules: HTTP ans SSH
 
-Don’t forget to add a tag to your droplets.
-
-- VPC
-- At least 2 Droplets
-- Load Balancer
-- Firewall (Use the DigitalOcean Cloud Firewall for the assignment)
+![image](https://user-images.githubusercontent.com/59521385/205427992-af24d34c-93b2-459c-8ba8-b768a1bf1979.png)
 
 [As2 Infrastructure](https://vimeo.com/775412708/4a219b37e7)
 
