@@ -35,20 +35,37 @@ username@droplet:~$ wget https://github.com/caddyserver/caddy/releases/download/
      - create new directory on WSL and called 2420-assign-two. 
      - Inside of this directory create 2 new directories **html** and **src**.
      - Inside of the html directory create an index.html page
-       Inside of your index.html document create a simple but complete html document (include a doctype, head, body… all the stuff an html document should have).
+       Inside of your index.html document create a simple but complete html document 
+       (include a doctype, head, body… all the stuff an html document should have).
      - Inside of the src directory create a new node project.
           - `npm init` 
           - `npm i fastify` to install fastify.
      - Create an index.js file and add in the fastify hello world example.
 
-Test your server locally and move both your html and src directory to both of your servers.
+**Test your server locally and move both your html and src directory to both of your servers.**
+
+username@wsl:~$ cd 2420-assign-two/src && curl https://get.volta.sh | bash
+
+username@wsl:~/2420-assign-two/src$ source ~/.bashrc
+
+username@wsl:~/2420-assign-two/src$ volta install node
+
+username@wsl:~/2420-assign-two/src$ npm init
+
+username@wsl:~/2420-assign-two/src$ npm install fastify
+
+
+![image](https://user-images.githubusercontent.com/59521385/205428737-a38c895a-ae92-4a19-9e34-b72518507a22.png)
+
+![image](https://user-images.githubusercontent.com/59521385/205428784-e4fba462-16e0-45da-8162-b45942e2956f.png)
+
 
 ```jsx
 // Require the framework and instantiate it
 const fastify = require('fastify')({ logger: true })
 
 // Declare a route
-fastify.get('/', async (request, reply) => {
+fastify.get('/api', async (request, reply) => {
   return { hello: 'Server x' }
 })
 
